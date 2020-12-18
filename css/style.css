@@ -17903,11 +17903,11 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 	content: "";
 }
 
-@media (min-width: 1500px) {
+/*@media (min-width: 1500px) {
 	.slick-prev {
 		left: -75px;
 	}
-}
+}*/
 
 .slick-next {
 	right: 0;
@@ -17926,18 +17926,6 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 [dir="rtl"] .slick-next:before {
 	content: "";
 }
-
-@media (min-width: 1500px) {
-	.slick-next {
-		right: -75px;
-	}
-}
-
-/* Dots */
-.slick-slider {
-	margin-bottom: 20px;
-}
-
 .slick-dots {
 	position: absolute;
 	bottom: -45px;
@@ -19165,5 +19153,176 @@ h3 + .card-custom-group-wrap {
 @media only screen and (max-width: 767px){
 	.footer-corporate__inner .copy-right{
 		text-align: center;
+	}
+}
+.feed-item img{
+	max-width: 562.5px;
+}
+.instagram-feed{
+	overflow: hidden;
+	width: 100%;
+	display: block;
+	height: 100%;
+}
+#feed-loading{
+	width: 100%;
+	z-index: 99;
+	position: relative;
+	display: none;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1900px){
+	.feed-item img{
+		max-width: 480px;
+		max-height: 480px;
+	}
+	#feed-loading, .instagram-feed, #instafeed{
+		min-height: 480px;
+		max-height: 480px;
+	}
+}
+@media only screen and (min-width: 768px){
+	#feed-loading, .instagram-feed, #instafeed{
+		min-height: 562.5px;
+		max-height: 562.5px;
+	}
+	.feed-item img{
+		max-width: 562.5px;
+		max-height: 562.5px;
+	}
+}
+@media only screen and (max-width: 768px){
+	#feed-loading, .instagram-feed, #instafeed{
+		min-height: 240px;
+		max-height: 240px;
+	}
+	.feed-item img{
+		max-width: 240px;
+		max-height: 240px;
+	}
+}
+@media only screen and (max-width: 500px){
+	#feed-loading, .instagram-feed, #instafeed{
+		min-height: 180px;
+		max-height: 180px;
+	}
+	.feed-item img{
+		max-width: 180px;
+		max-height: 180px;
+	}
+}
+#feed-loading img{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: calc(50% - 16px);
+}
+/* SLICK CUSTOM STYLE */
+
+.slick-slide{position: relative}
+.slick-slide::after{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	background: #3cf;
+	color: #000;
+}
+.slick-slide#slick-slide00::after{
+	content: "1/9"
+}
+.slick-slide#slick-slide01::after{
+	content: "2/9"
+}
+.slick-prev:before, .slick-next::before {
+	content: "";
+}
+/* Arrows */
+.slick-slider .slick-prev,
+.slick-slider .slick-next {
+	display: none;
+	position: absolute;
+	top: 50%;
+	width: 42px;
+	height: 40px;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: -30px;
+	border-radius: 50%;
+	z-index: 10;
+	cursor: pointer;
+	color: #fff;
+	transition: .33s;
+	/*background-color: #000;*/
+	background: transparent url("../images/arrow-left.png") no-repeat center;
+}
+.slick-slider .slick-next{
+	background: transparent url("../images/arrow-right.png") no-repeat center;
+}
+
+.slick-slider .slick-next::before,
+.slick-slider .slick-prev::before {
+	display: inline-block;
+	font-size: 13px;
+	line-height: 60px;
+	transition: .33s;
+}
+
+.slick-slider .slick-next:hover,
+.slick-slider .slick-prev:hover {
+	opacity: .75;
+}
+
+.slick-slider .slick-next:hover:before,
+.slick-slider .slick-prev:hover:before {
+	transform: scale(1.5);
+}
+
+@media (min-width: 992px) {
+	.slick-slider .slick-next,
+	.slick-slider .slick-prev {
+		display: block;
+	}
+}
+
+.slick-slider .slick-prev {
+	left: 25px;
+}
+
+.slick-slider .slick-next {
+	right: 25px;
+}
+
+@media (min-width: 1200px) {
+	.slick-slider .slick-prev {
+		left: 121px;
+	}
+	.slick-slider .slick-next {
+		right: 121px;
+	}
+}
+@media (min-width: 992px) {
+	.desktop .slick-slider .slick-prev {
+		transform: translateX(-400%);
+	}
+	.desktop .slick-slider .slick-next {
+		transform: translateX(400%);
+	}
+	.desktop .slick-slider:hover .slick-prev,
+	.desktop .slick-slider:hover .slick-next {
+		transform: translateX(0);
+	}
+}
+.section-instagram-feed{
+	margin-bottom: 50px;
+}
+@media only screen and (max-width: 768px){
+	.slick-slider .slick-prev, .slick-slider .slick-next{
+		margin-top: 0;
+	}
+	.section-instagram-feed{
+		padding-top: 0;
+		margin-bottom: 20px;
 	}
 }
